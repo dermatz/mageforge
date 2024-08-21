@@ -1,0 +1,14 @@
+{
+    "name": "dermatz/mageforge",
+    "description": "Magento 2 module for frontend wizardry~",
+    "license": "GPL-3.0",
+    "type": "magento2-module",
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "DerMatz\\MageForge\\": ""
+        }
+    }
+}
