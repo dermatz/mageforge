@@ -4,6 +4,10 @@
 
 MageForge is a Magento 2 module designed to assist frontend developers in streamlining their workflow and enhancing productivity.
 
+---
+
+[![Join our Discord community](./.github/assets/small_logo_blurple_RGB.png)](https://discord.gg/H5CjMXQQHn)
+
 ## Features
 
 ...
