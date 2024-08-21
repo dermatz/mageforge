@@ -6,14 +6,12 @@ All notable changes to this project will be documented in this file.
 
 ## UNRELEASED 0.1.0
 
--   added trunk support
--   added GitHub `issue` and `feature` templates
--   added `CONTRIBUTING.md` file with guidelines for contributing to MageForge
+- added trunk support
+- added GitHub `issue` and `feature` templates
+- added `CONTRIBUTING.md` file with guidelines for contributing to MageForge
 
 ---
 
 ## Latest Release
 
 ### 0.0.0 (update this line with first release)
-
-
