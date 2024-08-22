@@ -8,7 +8,7 @@ All notable changes to this project will be documented in this file.
 
 -   added trunk support
 -   added GitHub `issue` and `feature` templates
-
+-   added GitGuardian to improve Security
 ---
 
 ## Latest Release
