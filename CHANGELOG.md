@@ -9,6 +9,7 @@ All notable changes to this project will be documented in this file.
 - added trunk support
 - added GitHub `issue` and `feature` templates
 - added `CONTRIBUTING.md` file with guidelines for contributing to MageForge
+- added `README.md` with basic information
 
 ---
 
