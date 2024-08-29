@@ -10,7 +10,7 @@
                 xsi:type="array"
             >
                 <item
-                    name="mageforge_hello"
+                    name="mageforge_base_hello"
                     xsi:type="object"
                 >MageForge\Base\Console\Command\HelloMageForgeCommand</item>
             </argument>

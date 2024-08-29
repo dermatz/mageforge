@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace DerMatz\MageForge\Console\Command;
+namespace MageForge\Base\Console\Command;
 
 use Magento\Framework\Console\Cli;
 use Symfony\Component\Console\Command\Command;
