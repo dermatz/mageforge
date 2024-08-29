@@ -1,5 +1,5 @@
 {
-    "name": "dermatz/mageforge",
+    "name": "mageforge/base",
     "description": "Magento 2 module for frontend wizardry~",
     "license": "GPL-3.0",
     "type": "magento2-module",
@@ -8,7 +8,7 @@
             "registration.php"
         ],
         "psr-4": {
-            "DerMatz\\MageForge\\": ""
+            "MageForge\\Base\\": ""
         }
     }
 }

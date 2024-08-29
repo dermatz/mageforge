@@ -12,7 +12,7 @@
                 <item
                     name="mageforge_hello"
                     xsi:type="object"
-                >DerMatz\MageForge\Console\Command\HelloMageForgeCommand</item>
+                >MageForge\Base\Console\Command\HelloMageForgeCommand</item>
             </argument>
         </arguments>
     </type>
