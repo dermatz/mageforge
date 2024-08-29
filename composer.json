@@ -1,14 +1,14 @@
 {
-    "name": "mageforge/base",
-    "description": "Magento 2 module for frontend wizardry~",
-    "license": "GPL-3.0",
-    "type": "magento2-module",
-    "autoload": {
-        "files": [
-            "registration.php"
-        ],
-        "psr-4": {
-            "MageForge\\Base\\": ""
-        }
+  "name": "mageforge/base",
+  "description": "Magento 2 module for frontend wizardry~",
+  "license": "GPL-3.0",
+  "type": "magento2-module",
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "MageForge\\Base\\": ""
     }
+  }
 }
