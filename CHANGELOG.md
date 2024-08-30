@@ -11,6 +11,8 @@ All notable changes to this project will be documented in this file.
 - added `CONTRIBUTING.md` file with guidelines for contributing to MageForge
 - added `README.md` with basic information
 - added `HelloMageForgeCommand`
+- added phpcs
+- added phpmd
 
 ---
 
