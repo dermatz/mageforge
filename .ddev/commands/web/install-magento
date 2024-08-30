@@ -55,7 +55,7 @@ bin/magento sampledata:deploy
 composer config repositories.mageforge vcs https://github.com/dermatz/mageforge.git
 
 # require module
-composer require dermatz/mageforge --prefer-source
+composer require mageforge/base:dev-main --prefer-source
 
 # enable module
 bin/magento setup:upgrade
