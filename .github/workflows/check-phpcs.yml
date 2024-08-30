@@ -1,0 +1,22 @@
+name: Check phpcs
+
+on: [pull_request]
+
+jobs:
+  check-phpcs:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: "8.2"
+
+      - name: Install dependencies
+        run: composer install
+
+      - name: Run PHPCS
+        run: composer run-script phpcs

@@ -10,5 +10,14 @@
     "psr-4": {
       "MageForge\\Base\\": ""
     }
+  },
+  "require-dev": {
+    "magento/magento-coding-standard": "33",
+    "phpmd/phpmd": "~2.15"
+  },
+  "scripts": {
+    "phpcs": "phpcs --standard=Magento2 .",
+    "phpmd": "phpmd . ansi cleancode,codesize,controversial,design,naming,unusedcode",
+    "phpmd-github": "phpmd . github cleancode,codesize,controversial,design,naming,unusedcode"
   }
 }
