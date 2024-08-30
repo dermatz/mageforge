@@ -19,4 +19,4 @@ jobs:
         run: composer install --no-plugins
 
       - name: Run PHPCS
-        run: composer run-script phpcs
+        run: composer run-script phpcs --no-plugins

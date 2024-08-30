@@ -19,4 +19,4 @@ jobs:
         run: composer install --no-plugins
 
       - name: Run PHPMD
-        run: composer run-script phpmd-github
+        run: composer run-script phpmd-github --no-plugins
