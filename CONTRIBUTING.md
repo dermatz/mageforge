@@ -14,7 +14,8 @@ We appreciate your interest in contributing to MageForge! Please follow the guid
 ## Coding Standards
 
 - **Magento Coding Standards**: Adhere to the Magento Coding Standards throughout your code.
-- **Code Validation**: Run `trunk check` to ensure your code complies with our coding rules. Our pipeline will also automatically check this.
+- **Code Validation**: Make sure your code is free of errors and warnings.
+- **GitHub Actions**: Our pipeline will automatically check coding standards using GitHub Actions.
 
 ## Documentation Guidelines
 
