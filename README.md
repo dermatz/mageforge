@@ -6,7 +6,7 @@ Make sure you have [DDEV](https://ddev.readthedocs.io/en/stable/users/install/dd
 
 To clone this repository, use the command `git clone -b develop git@github.com:dermatz/mageforge.git`.
 
-Navigate to the cloned directory by running `cd mage2-forge`.
+Navigate to the cloned directory by running `cd mageforge`.
 
 Start DDEV by running `ddev start`.
 
