@@ -12,12 +12,9 @@
     }
   },
   "require-dev": {
-    "magento/magento-coding-standard": "33",
-    "phpmd/phpmd": "~2.15"
+    "magento/magento-coding-standard": "33"
   },
   "scripts": {
-    "phpcs": "vendor/bin/phpcs --standard=Magento2 src/",
-    "phpmd": "vendor/bin/phpmd src/ ansi cleancode,codesize,controversial,design,naming,unusedcode",
-    "phpmd-github": "vendor/bin/phpmd . github cleancode,codesize,controversial,design,naming,unusedcode"
+    "phpcs": "vendor/bin/phpcs --standard=Magento2 src/"
   }
 }
