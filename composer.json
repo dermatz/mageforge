@@ -10,11 +10,5 @@
     "psr-4": {
       "MageForge\\Base\\": "src/"
     }
-  },
-  "require-dev": {
-    "magento/magento-coding-standard": "33"
-  },
-  "scripts": {
-    "phpcs": "vendor/bin/phpcs --standard=Magento2 src/"
   }
 }
