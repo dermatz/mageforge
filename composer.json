@@ -8,7 +8,7 @@
       "registration.php"
     ],
     "psr-4": {
-      "MageForge\\Base\\": ""
+      "MageForge\\Base\\": "src/"
     }
   },
   "require-dev": {
@@ -16,8 +16,8 @@
     "phpmd/phpmd": "~2.15"
   },
   "scripts": {
-    "phpcs": "vendor/bin/phpcs --standard=Magento2 .",
-    "phpmd": "vendor/bin/phpmd . ansi cleancode,codesize,controversial,design,naming,unusedcode",
+    "phpcs": "vendor/bin/phpcs --standard=Magento2 src/",
+    "phpmd": "vendor/bin/phpmd src/ ansi cleancode,codesize,controversial,design,naming,unusedcode",
     "phpmd-github": "vendor/bin/phpmd . github cleancode,codesize,controversial,design,naming,unusedcode"
   }
 }
