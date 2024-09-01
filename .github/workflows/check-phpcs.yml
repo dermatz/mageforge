@@ -2,6 +2,9 @@ name: Check phpcs
 
 on: [pull_request]
 
+env:
+  PHP_VERSION: "8.3"
+
 jobs:
   check-phpcs:
     runs-on: ubuntu-latest
@@ -13,10 +16,10 @@ jobs:
       - name: Set up PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: "8.2"
+          php-version: ${{ env.PHP_VERSION }}
 
-      - name: Install dependencies
-        run: composer install --no-plugins
+      - name: Install Magento Coding Standard
+        run: composer create-project magento/magento-coding-standard --stability=dev /tmp/magento-coding-standard
 
       - name: Run PHPCS
-        run: composer run-script phpcs --no-plugins
+        run: /tmp/magento-coding-standard/vendor/bin/phpcs --standard=Magento2 src/
