@@ -12,7 +12,6 @@ All notable changes to this project will be documented in this file.
 - added `README.md` with basic information
 - added `HelloMageForgeCommand`
 - added phpcs
-- added phpmd
 
 ---
 
