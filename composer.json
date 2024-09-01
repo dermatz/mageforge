@@ -8,7 +8,7 @@
       "registration.php"
     ],
     "psr-4": {
-      "MageForge\\Base\\": ""
+      "MageForge\\Base\\": "src/"
     }
   }
 }

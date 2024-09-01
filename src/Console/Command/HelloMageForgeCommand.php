@@ -12,7 +12,7 @@ use Symfony\Component\Console\Output\OutputInterface;
 class HelloMageForgeCommand extends Command
 {
     /**
-     * {@inheritDoc}
+     * @inheritDoc
      */
     protected function configure(): void
     {
@@ -21,7 +21,7 @@ class HelloMageForgeCommand extends Command
     }
 
     /**
-     * {@inheritDoc}
+     * @inheritDoc
      */
     protected function execute(
         InputInterface $input,
