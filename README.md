@@ -6,6 +6,7 @@ MageForge is a Magento 2 module designed to assist frontend developers in stream
 
 ---
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/5bdb3fb3dc4d405c9377c8ce13051016)](https://app.codacy.com/gh/dermatz/mageforge?utm_source=github.com&utm_medium=referral&utm_content=dermatz/mageforge&utm_campaign=Badge_Grade)
 [![Join our Discord community](./.github/assets/small_logo_blurple_RGB.png)](https://discord.gg/H5CjMXQQHn)
 
 ## Features
