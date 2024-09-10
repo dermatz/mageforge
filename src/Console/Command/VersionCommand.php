@@ -81,21 +81,29 @@ class VersionCommand extends Command
      */
     private function getLatestVersion(): string
     {
-        $client = new Client();
         try {
-            $response = $client->get(self::API_URL);
-            if ($response->getStatusCode() !== 200) {
-                throw new \Exception('Invalid response status');
-            }
-
-            $data = json_decode($response->getBody()->getContents(), true);
-            if (json_last_error() !== JSON_ERROR_NONE) {
-                throw new \Exception('JSON decode error');
-            }
-
-            return $data['tag_name'] ?? self::UNKNOWN_VERSION;
+            return $this->fetchLatestVersion();
         } catch (\Exception $e) {
             return self::UNKNOWN_VERSION;
         }
+    }
+
+    /**
+     * Fetch the latest version from the GitHub API
+     */
+    private function fetchLatestVersion(): string
+    {
+        $client = new Client();
+        $response = $client->get(self::API_URL);
+        if ($response->getStatusCode() !== 200) {
+            throw new \RuntimeException('Invalid response status');
+        }
+
+        $data = json_decode($response->getBody()->getContents(), true);
+        if (json_last_error() !== JSON_ERROR_NONE) {
+            throw new \RuntimeException('JSON decode error');
+        }
+
+        return $data['tag_name'] ?? self::UNKNOWN_VERSION;
     }
 }
