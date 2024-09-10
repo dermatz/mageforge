@@ -24,7 +24,7 @@ php bin/magento mageforge:version
 
 Example output:
 
-```
+```sh
 Module Version: 1.0.0
 Latest Version: 1.0.0
 ```
