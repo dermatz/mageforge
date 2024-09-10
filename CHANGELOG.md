@@ -13,6 +13,7 @@ All notable changes to this project will be documented in this file.
 - added `HelloMageForgeCommand`
 - added phpcs
 - added dependabot
+- added `VersionCommand`
 
 ---
 
