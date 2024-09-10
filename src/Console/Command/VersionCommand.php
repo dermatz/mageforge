@@ -15,12 +15,18 @@ class VersionCommand extends Command
     private const API_URL = 'https://api.github.com/repos/mage-forge/base/releases/latest';
     private const UNKNOWN_VERSION = 'Unknown';
 
+    /**
+     * @inheritDoc
+     */
     protected function configure(): void
     {
         $this->setName('mageforge:version');
         $this->setDescription('Displays the module version and the latest version');
     }
 
+    /**
+     * @inheritDoc
+     */
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $moduleVersion = $this->getModuleVersion();
@@ -32,6 +38,9 @@ class VersionCommand extends Command
         return Cli::RETURN_SUCCESS;
     }
 
+    /**
+     * Get the module version from the composer.lock file
+     */
     private function getModuleVersion(): string
     {
         $composerLockPath = __DIR__ . '/../../../../../../composer.lock';
@@ -53,6 +62,9 @@ class VersionCommand extends Command
         return self::UNKNOWN_VERSION;
     }
 
+    /**
+     * Get the latest version from the GitHub API
+     */
     private function getLatestVersion(): string
     {
         $client = new Client();
