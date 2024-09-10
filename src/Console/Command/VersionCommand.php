@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace MageForge\Base\Console\Command;
 
+use MageForge\Base\Exception\FetchLatestVersionException;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
@@ -96,12 +97,12 @@ class VersionCommand extends Command
         $client = new Client();
         $response = $client->get(self::API_URL);
         if ($response->getStatusCode() !== 200) {
-            throw new \RuntimeException('Invalid response status');
+            throw new FetchLatestVersionException('Invalid response status');
         }
 
         $data = json_decode($response->getBody()->getContents(), true);
         if (json_last_error() !== JSON_ERROR_NONE) {
-            throw new \RuntimeException('JSON decode error');
+            throw new FetchLatestVersionException('JSON decode error');
         }
 
         return $data['tag_name'] ?? self::UNKNOWN_VERSION;
