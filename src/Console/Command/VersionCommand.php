@@ -9,11 +9,18 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Magento\Framework\Console\Cli;
 use GuzzleHttp\Client;
+use Magento\Framework\Filesystem\Driver\File;
 
 class VersionCommand extends Command
 {
     private const API_URL = 'https://api.github.com/repos/mage-forge/base/releases/latest';
     private const UNKNOWN_VERSION = 'Unknown';
+
+    public function __construct(
+        private readonly File $fileDriver
+    ) {
+        parent::__construct();
+    }
 
     /**
      * @inheritDoc
@@ -44,11 +51,11 @@ class VersionCommand extends Command
     private function getModuleVersion(): string
     {
         $composerLockPath = __DIR__ . '/../../../../../../composer.lock';
-        if (!file_exists($composerLockPath)) {
+        if (!$this->fileDriver->isExists($composerLockPath)) {
             return self::UNKNOWN_VERSION;
         }
 
-        $composerLock = json_decode(file_get_contents($composerLockPath), true);
+        $composerLock = json_decode($this->fileDriver->fileGetContents($composerLockPath), true);
         if (json_last_error() !== JSON_ERROR_NONE) {
             return self::UNKNOWN_VERSION;
         }
