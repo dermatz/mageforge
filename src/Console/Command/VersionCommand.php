@@ -70,7 +70,8 @@ class VersionCommand extends Command
         $client = new Client();
         try {
             $response = $client->get(self::API_URL);
-        } catch (\Exception $e) {
+        }
+        catch (\Exception $e) {
             return self::UNKNOWN_VERSION;
         }
 
