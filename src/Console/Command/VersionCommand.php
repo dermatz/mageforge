@@ -16,6 +16,11 @@ class VersionCommand extends Command
     private const API_URL = 'https://api.github.com/repos/mage-forge/base/releases/latest';
     private const UNKNOWN_VERSION = 'Unknown';
 
+    /**
+     * VersionCommand constructor.
+     *
+     * @param File $fileDriver
+     */
     public function __construct(
         private readonly File $fileDriver
     ) {
@@ -77,8 +82,7 @@ class VersionCommand extends Command
         $client = new Client();
         try {
             $response = $client->get(self::API_URL);
-        }
-        catch (\Exception $e) {
+        } catch (\Exception $e) {
             return self::UNKNOWN_VERSION;
         }
 
