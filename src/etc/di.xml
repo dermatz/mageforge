@@ -13,6 +13,10 @@
                     name="mageforge_base_hello"
                     xsi:type="object"
                 >MageForge\Base\Console\Command\HelloMageForgeCommand</item>
+                <item
+                    name="mageforge_base_version"
+                    xsi:type="object"
+                >MageForge\Base\Console\Command\VersionCommand</item>
             </argument>
         </arguments>
     </type>
