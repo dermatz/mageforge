@@ -65,13 +65,15 @@ class VersionCommand extends Command
             return self::UNKNOWN_VERSION;
         }
 
+        $moduleVersion = self::UNKNOWN_VERSION;
         foreach ($composerLock['packages'] as $package) {
             if ($package['name'] === 'mageforge/base') {
-                return $package['version'];
+                $moduleVersion = $package['version'];
+                break;
             }
         }
 
-        return self::UNKNOWN_VERSION;
+        return $moduleVersion;
     }
 
     /**
@@ -82,19 +84,18 @@ class VersionCommand extends Command
         $client = new Client();
         try {
             $response = $client->get(self::API_URL);
+            if ($response->getStatusCode() !== 200) {
+                throw new \Exception('Invalid response status');
+            }
+
+            $data = json_decode($response->getBody()->getContents(), true);
+            if (json_last_error() !== JSON_ERROR_NONE) {
+                throw new \Exception('JSON decode error');
+            }
+
+            return $data['tag_name'] ?? self::UNKNOWN_VERSION;
         } catch (\Exception $e) {
             return self::UNKNOWN_VERSION;
         }
-
-        if ($response->getStatusCode() !== 200) {
-            return self::UNKNOWN_VERSION;
-        }
-
-        $data = json_decode($response->getBody()->getContents(), true);
-        if (json_last_error() !== JSON_ERROR_NONE) {
-            return self::UNKNOWN_VERSION;
-        }
-
-        return $data['tag_name'] ?? self::UNKNOWN_VERSION;
     }
 }
