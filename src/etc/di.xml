@@ -10,9 +10,9 @@
                 xsi:type="array"
             >
                 <item
-                    name="mageforge_base_hello"
+                    name="mageforge_base_build_theme"
                     xsi:type="object"
-                >MageForge\Base\Console\Command\HelloMageForgeCommand</item>
+                >MageForge\Base\Console\Command\BuildThemeCommand</item>
             </argument>
         </arguments>
     </type>
