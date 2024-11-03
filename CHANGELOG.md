@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file.
 
 ## UNRELEASED 0.1.0
 
+- added .gitignore to exclude unnecessary files
 - added trunk support
 - added GitHub `issue` and `feature` templates
 - added `CONTRIBUTING.md` file with guidelines for contributing to MageForge
