@@ -14,6 +14,7 @@ All notable changes to this project will be documented in this file.
 - added phpcs
 - added dependabot
 - added `VersionCommand`
+- added Codacy Badge to `README.md`
 
 ---
 
