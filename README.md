@@ -1,9 +1,8 @@
 # MageForge for Magento 2
 
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/365d32460022451ba3918f5643341753)](https://app.codacy.com/gh/dermatz/mageforge/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
-
 ![Mageforge Hero](./.github/assets/mageforge-hero.jpg)
 
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/365d32460022451ba3918f5643341753)](https://app.codacy.com/gh/dermatz/mageforge/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
 MageForge is a Magento 2 module designed to assist frontend developers in streamlining their workflow and enhancing productivity.
 
 ---
